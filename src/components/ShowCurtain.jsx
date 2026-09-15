@@ -21,8 +21,13 @@ export default function ShowCurtain() {
     window.setTimeout(() => setGone(true), 1500)
   }
 
+  const curtainImage = `url(${import.meta.env.BASE_URL}curtain.jpg)`
+
   return (
-    <div className={parted ? "show-curtain is-open" : "show-curtain"}>
+    <div
+      className={parted ? "show-curtain is-open" : "show-curtain"}
+      style={{ "--curtain-image": curtainImage }}
+    >
       <div className="show-curtain-panel show-curtain-left">
         <div className="show-curtain-fabric" />
       </div>
